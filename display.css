@@ -10,34 +10,87 @@
     "log"
     "input";
   height: 100vh;
+  background-image: url("output-pic.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* children of main container */
 #tool-bar-container{
-  margin: 0px;
-  border: 3px solid black;
-  background-color: rgb(172, 243, 6);
-  grid-area: 1 / 1 / 12 / 3;
+  display:flex;
+  flex-direction:column;
+  /* justify-content:flex-start; */
+  align-items: center;
+  margin: 10px;
+  grid-area: 1 / 1 / 8 / 3;
+  border: 1px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  background-color:rgba(7, 229, 236, 0.3);
+  backdrop-filter: blur(10px);
 
 }
 
 #main-logo-container{
-  margin: 0px;
+  margin: 10px;
   border: 3px solid black;
-  background-image: url("..images/project1logo.png");
-  grid-area: 8 / 3 / 12 / 8;
+  border-radius: 16px;
+  grid-area: 8 / 1 / 12 / 8;
+  background-image: url("project1logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #input-container{
-  margin: 0px;
-  border: 3px solid black;
-  background-color: rgb(3, 248, 113);
+  text-align:center;
+  margin: 10px;
+  border: 1px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  background-color:rgba(7, 229, 236, 0.3);
+  backdrop-filter: blur(10px);
   grid-area: 8 / 8 / 12 / 12;
 }
 
 #output-container{
+  display: flex;
+  justify-content:center;
   margin: 0px;
-  border: 3px solid black;
-  background-color: rgb(241, 7, 7);
   grid-area: 1 / 3 / 8 / 12;
+}
+
+/* output weather cards */
+
+.weather-card{
+  text-align:center;
+  width: 700px;
+  margin: 10px;
+  border: 1px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  background-color:rgb(253, 253, 253, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* container hover over affects */
+
+#tool-bar-container:hover,
+#input-container:hover,
+.weather-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.6s ease;
+}
+
+/* tool bar items  */
+#tool-bar-container div{
+  text-align:center;
+  font-size: 25px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 300px;
+  height:100px;
 }
