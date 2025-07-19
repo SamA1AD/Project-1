@@ -4,40 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="display.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <title>Weather Display</title>
+
 </head>
-<body>
-  <div class="main-container">
+<body class="sb-expanded">
+  <div  class="main-container">
     <!--START  tool bar container  -->
-    <div class="container" id="tool-bar-container">
-      <div>Preflight Checklist</div>
-      <div>Postflight Report</div>
-      <div>Air Radar</div>
-      <div>Drop Calculator</div>
-    </div>
+    <aside>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="active">
+              <i class="bx bx-home-alt-2"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+            <li>
+            <a href="#">
+              <i class="bx bxs-wrench"></i>
+              <span>Tools</span>
+            </a>
+          </li>
+            <li>
+            <a href="#">
+              <i class="bx bx-paper-plane"></i>
+              <span>Air Traffic</span>
+            </a>
+          </li>
+            <li>
+            <a href="#">
+              <i class="bx bxl-facebook-square"></i>
+              <span>Share</span>
+            </a>
+            </li>
+          </li>
+            <li>
+            <a href="#" data-resize-btn>
+              <i class="bx bx-chevrons-right"></i>
+              <span>Collapse</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
     <!--END of tool bar container -->
-
-    <!--START main logo container -->
-    <div class="container" id="main-logo-container">
-      <div>Logo</div>
-
-    </div>
-    <!--END of main logo container -->
-
-
-    <!--START input container  -->
-    <div class="container" id="input-container">
-      INPUT
-    </div>
-    <!--END of input container -->
-
-
 
     <!--START output container -->
     <div  id="output-container">
       <!-- item one of output -->
       <div  class="weather-card">
-        <h1>Today</h1>
+        <P><h1>Today</h1></P>
+        <p id="today-emoji"></p>
+        <p id="today-time"></p>
+        <p id="today-current-temp"></p>
+        <p id="today-sky"></p>
+        <p id="today-min"></p>
+        <p id="today-max"></p>
+        <p id="today-humidity"></p>
+        <p id="today-windspeed"></p>
       </div>
       <!-- item two of outpu -->
       <div  class="weather-card">
@@ -47,5 +72,7 @@
     </div>
     <!-- END of main container -->
   </div>
+
+  <script src="display.js"></script>
 </body>
 </html>
